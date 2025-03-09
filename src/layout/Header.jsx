@@ -10,11 +10,7 @@ export function Header() {
       <nav className="flex justify-between items-center h-14 bg-[#00a3fc] text-white px-4">
         <section>
           <Link to={"/"}>
-            <img
-              src="../src/assets/online-shop-sm.webp"
-              alt="Logo"
-              className="w-12"
-            />
+            <img src="/online-shop-sm.webp" alt="Logo" className="w-12" />
           </Link>
         </section>
         <section className="flex justify-between items-center gap-2">
