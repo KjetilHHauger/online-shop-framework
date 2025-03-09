@@ -90,7 +90,7 @@ function Product() {
       </div>
       <button
         onClick={handleAddToCart}
-        className="bg-blue-500 text-white p-2 rounded"
+        className="bg-blue-500 text-white p-2 rounded cursor-pointer"
       >
         Add to Cart
       </button>
