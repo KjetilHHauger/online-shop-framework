@@ -6,7 +6,7 @@ import { Layout } from "./layout/index.jsx";
 import Home from "./routes/Home.jsx";
 import Contact from "./routes/Contact.jsx";
 import Product from "./routes/Product.jsx";
-import Cart from "./routes/Cart.jsx";
+import Cart from "./routes/CartPage.jsx";
 import CheckoutSuccess from "./components/CheckoutSuccess.jsx";
 
 const router = createBrowserRouter([
