@@ -11,7 +11,7 @@ export function Header() {
         <section>
           <Link to={"/"}>
             <img
-              src="../src/assets/online-shop-sm.webp"
+              src="./src/assets/online-shop-sm.webp"
               alt="Logo"
               className="w-12"
             />
