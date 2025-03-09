@@ -50,7 +50,7 @@ function Cart() {
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => handleQuantityChange(item.id, -1)}
-                  className="text-blue-500 px-2 py-1 border rounded"
+                  className="text-blue-500 px-2 py-1 border rounded hover:bg-blue-500 hover:text-white cursor-pointer"
                 >
                   -
                 </button>
@@ -58,18 +58,18 @@ function Cart() {
                   type="number"
                   value={item.quantity}
                   onChange={(event) => handleInputChange(event, item.id)}
-                  className="w-12 text-center border rounded"
+                  className="w-12 text-center border rounded py-1"
                   min="0"
                 />
                 <button
                   onClick={() => handleQuantityChange(item.id, 1)}
-                  className="text-blue-500 px-2 py-1 border rounded"
+                  className="text-blue-500 px-2 py-1 border rounded hover:bg-blue-500 hover:text-white cursor-pointer"
                 >
                   +
                 </button>
                 <button
                   onClick={() => removeFromCart(item.id)}
-                  className="text-red-500 px-2 py-1 border rounded"
+                  className="text-red-500 px-2 py-1 border rounded hover:bg-red-500 hover:text-white cursor-pointer"
                 >
                   Remove
                 </button>
@@ -83,7 +83,7 @@ function Cart() {
           </div>
           <button
             onClick={handleCheckout}
-            className="bg-green-500 text-white p-2 rounded"
+            className="bg-green-500 text-white p-2 rounded hover:bg-green-600 cursor-pointer"
           >
             Checkout
           </button>
