@@ -5,6 +5,8 @@ const api = "https://v2.api.noroff.dev/online-shop";
 
 function Home() {
   const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     async function fetchData() {
@@ -15,10 +17,26 @@ function Home() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    const filtered = products.filter((product) =>
+      product.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    setFilteredProducts(filtered);
+  }, [searchQuery, products]);
+
   return (
     <>
-      <div className="flex justify-center flex-wrap gap-4">
-        {products.map((product) => (
+      <div className="mb-4">
+        <input
+          type="text"
+          placeholder="Search products here"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="p-2 border rounded"
+        />
+      </div>
+      <div className="flex justify-between flex-wrap gap-4">
+        {filteredProducts.map((product) => (
           <Link
             to={`/product/${product.id}`}
             key={product.id}
