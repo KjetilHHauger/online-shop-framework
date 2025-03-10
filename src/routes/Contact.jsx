@@ -5,10 +5,12 @@ function ContactForm() {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
   const onSubmit = (data) => {
     console.log("Form submitted:", data);
+    reset();
   };
 
   return (
@@ -92,7 +94,10 @@ function ContactForm() {
         {errors.body && <p className="text-red-500">{errors.body.message}</p>}
       </div>
 
-      <button type="submit" className="bg-blue-500 text-white p-2">
+      <button
+        type="submit"
+        className="bg-blue-500 text-white p-2 cursor-pointer hover:bg-blue-600"
+      >
         Submit
       </button>
     </form>
