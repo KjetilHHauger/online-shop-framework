@@ -26,7 +26,7 @@ function Home() {
 
   return (
     <>
-      <div className="mb-4">
+      <div className="mb-4 flex justify-center">
         <input
           type="text"
           placeholder="Search products here"
@@ -35,7 +35,7 @@ function Home() {
           className="p-2 border rounded"
         />
       </div>
-      <div className="flex justify-between flex-wrap gap-4">
+      <div className="flex justify-center flex-wrap gap-4">
         {filteredProducts.map((product) => (
           <Link
             to={`/product/${product.id}`}
